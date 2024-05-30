@@ -26,14 +26,14 @@ class AuthController extends Controller
             'number' => $request->number,
             'class' => $request->class,
             'domaine' => $request->domaine,
-            'niveau' => '',
+            'niveau' => $request->niveau,
             'password' => Hash::make($request->password)
         ]);
         if ($user) {
             return to_route('index');
         }
         return to_route('auth.signup');
-        
+
     }
     public function dosignin(SignInRequest $request){
         $credentials = $request->validated();
