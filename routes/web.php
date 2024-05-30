@@ -16,7 +16,10 @@ use App\Http\Controllers\AuthController;
 
 //LES ROUTES 
 Route::get('/signup', [AuthController::class, 'signup'])->name('auth.signup');
+Route::post('/signup', [AuthController::class, 'dosignup'])->name('auth.dosignup');
+Route::get('/signin', [AuthController::class, 'signin'])->name('auth.signin');
+Route::post('/signin', [AuthController::class, 'dosignin'])->name('auth.dosignin');
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
