@@ -17,6 +17,11 @@ class AuthController extends Controller
     public function signin(){
         return view('auth.signin');
     }
+    public function profil()
+    {
+        $user = Auth::user();
+        return view('auth.profil', ['user' => $user]);
+    }
     public function dosignup(SignUpRequest $request){
         $user = User::create([
             'name' => $request->name,
