@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//LES ROUTES 
+Route::get('/signup', [AuthController::class, 'signup'])->name('auth.signup');
 
 Route::get('/', function () {
     return view('welcome');
