@@ -21,7 +21,7 @@ class SondageController extends Controller
         ]);
 
         // Récupérer l'utilisateur connecté
-        $user = auth()->user();
+        $user = auth()->user(); // ou $request->user();
 
         // Enregistrer la réponse dans la base de données
         $sondage = new Sondage();
