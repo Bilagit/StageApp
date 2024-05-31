@@ -23,9 +23,6 @@ class AuthController extends Controller
         return view('auth.profil', ['user' => $user]);
     }
     
-    public function sondage2(){
-        return view('Sondage.sondage2');
-    }
     public function dosignup(SignUpRequest $request){
         $user = User::create([
             'name' => $request->name,
@@ -39,7 +36,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password)
         ]);
         if ($user) {
-            return to_route('index');
+            return to_route('auth.signin');
         }
         return to_route('auth.signup');
 
