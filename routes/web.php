@@ -20,6 +20,7 @@ Route::post('/signup', [AuthController::class, 'dosignup'])->name('auth.dosignup
 Route::get('/signin', [AuthController::class, 'signin'])->name('auth.signin');
 Route::post('/signin', [AuthController::class, 'dosignin'])->name('auth.dosignin');
 Route::get('/profil', [AuthController::class, 'profil'])->name('auth.profil');
+Route::get('/sondage2', [AuthController::class, 'sondage2'])->name('auth.sondage2');
 
 Route::get('/', function () {
     return view('welcome');
