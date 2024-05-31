@@ -16,13 +16,15 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-//LES ROUTES 
+//LES ROUTES
 Route::get('/signup', [AuthController::class, 'signup'])->name('auth.signup');
 Route::post('/signup', [AuthController::class, 'dosignup'])->name('auth.dosignup');
 Route::get('/signin', [AuthController::class, 'signin'])->name('auth.signin');
 Route::post('/signin', [AuthController::class, 'dosignin'])->name('auth.dosignin');
 Route::get('/profil', [AuthController::class, 'profil'])->name('auth.profil')->middleware('auth');
 Route::get('/show', [UsersController::class, 'show'])->name('show')->middleware('auth');
+Route::get('/sondage', [SondageController::class, 'sondage1'])->name('sondage.index');
+Route::post('/sondage', [SondageController::class, 'store'])->name('sondage.store');
 
 Route::get('/', function () {
     return view('welcome');

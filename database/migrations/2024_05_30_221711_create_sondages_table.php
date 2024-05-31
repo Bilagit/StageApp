@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('sondages', function (Blueprint $table) {
             $table->id();
-            $table->string('reponse1');
-            $table->string('choix1');
-            $table->string('choix2');
-            $table->string('choix3');
+            $table->boolean('reponse1')->nullable();
+            $table->string('choix1')->default('')->nullable();
+            $table->string('choix2')->default('')->nullable();
+            $table->string('choix3')->default('')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
