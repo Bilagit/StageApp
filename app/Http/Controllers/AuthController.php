@@ -22,6 +22,10 @@ class AuthController extends Controller
         $user = Auth::user();
         return view('auth.profil', ['user' => $user]);
     }
+    
+    public function sondage2(){
+        return view('Sondage.sondage2');
+    }
     public function dosignup(SignUpRequest $request){
         $user = User::create([
             'name' => $request->name,
