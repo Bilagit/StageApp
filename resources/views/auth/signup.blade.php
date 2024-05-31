@@ -32,10 +32,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('profile') }}">Profil</a>
+                        <a class="nav-link text-white" href="{{ route('auth.profil') }}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('auth.logout') }}">Déconnexion</a>
+                        <a class="nav-link text-white" >Déconnexion</a>
                     </li>
                 @endguest
             </ul>
