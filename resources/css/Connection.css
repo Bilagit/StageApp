@@ -4,13 +4,13 @@
     display: flex;
     height: 100vh;
   }
-  
+
   .login-form {
     flex: 1;
     padding: 20px;
     background-color: #ffffff; /* Couleur de fond de la partie du formulaire */
   }
-  
+
   .login-bg {
     flex: 1;
     background-color: #f0f0f0; /* Couleur de fond grise */
@@ -26,5 +26,36 @@
 .cursor-pointer {
     cursor: pointer;
 }
+/* Styles de la Navbar */
+.navbar {
+    background: rgba(0, 123, 255, 0.9); /* Légère transparence */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
 
-  
+.navbar-brand {
+    font-size: 1.25rem; /* Taille de police augmentée pour la marque */
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1.1rem; /* Taille de police augmentée pour les liens */
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+.nav-link:hover {
+    color: #f8f9fa; /* Couleur de lien au survol */
+    background-color: rgba(255, 255, 255, 0.1); /* Légère transition de fond au survol */
+    border-radius: 5px; /* Bords arrondis au survol */
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Inverser la couleur de l'icône du toggle pour être visible sur fond foncé */
+}
+
+/* Petits ajustements pour des écrans plus larges */
+@media (min-width: 992px) {
+    .navbar-nav .nav-item + .nav-item {
+        margin-left: 1rem; /* Espacement entre les éléments de navigation */
+    }
+}
+
