@@ -49,7 +49,7 @@
                         @foreach($sondages as $sondage)
                         <tr>
                             <th scope="row">Intéret du stage</th>
-                            <td>Oui</td>
+                            <td>{{ $sondage->reponse1 == 1 ? 'Oui' : 'Non' }}</td>
                         </tr>
                         @break
                         @endforeach
@@ -58,8 +58,9 @@
             </div>
         </div>
     </div>
+    <center>
     <a href="{{ route('resultat.resultat2') }}" class="btn btn-primary">Resultat 2</a>
-
+    </center>
 </body>
 </html>
 @endsection
