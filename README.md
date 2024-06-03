@@ -28,7 +28,7 @@ Placez vous au niveau du répertoire StageApp et faites:
 ## Configuration 
 Assurez vous que votre serveur de base de données est en marche ensuite suivez ces étapes : 
 
-- Dans le fichier .env au niveau de la racine indiquer quelle base de données utiliser et saisissez les informations de votre base de données.
+- Renommez le fichier .env.example en .env au niveau de la racine indiquer quelle base de données utiliser et saisissez les informations de votre base de données.
 - Ensuite au niveau de la console placez vous dans la racine du projet et faites => php artisan migrate
 
 ## Démarrage
