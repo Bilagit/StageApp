@@ -33,7 +33,7 @@ Assurez vous que votre serveur de base de données est en marche ensuite suivez 
 
 ## Démarrage
 
-Pour démarrer le serveur au niveau de votre console faites => php artisan serve
-Ouvrez une nouvelle console et placez vous bien sûr dans le dossier du projet et faites => npm run dev 
-Cela démarrera le serveur Vite 
+- Pour démarrer le serveur au niveau de votre console faites => php artisan serve
+- Ouvrez une nouvelle console et placez vous bien sûr dans le dossier du projet et faites => npm run dev 
+- Cela démarrera le serveur Vite 
 
